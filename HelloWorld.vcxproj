@@ -110,6 +110,9 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PreBuildEvent>
+      <Command>copy "opencv\build\x64\vc15\bin\opencv_world460.dll" "x64\Debug\opencv_world460.dll" &amp; copy "opencv\build\x64\vc15\bin\opencv_world460d.dll" "x64\Debug\opencv_world460d.dll"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
